@@ -63,7 +63,43 @@ src/
 
 ## Tampilan Aplikasi
 
-Screenshot aplikasi akan ditambahkan pada pembaruan berikutnya.
+S## Tampilan Aplikasi
+
+### Halaman Login
+
+![Login](screenshots/login.png)
+
+### Dashboard Ibu Hamil
+
+![Dashboard Ibu](screenshots/dashboard-ibu.png)
+
+### Dashboard Suami
+
+![Dashboard Suami](screenshots/dashboard-suami.png)
+
+### Dashboard Dokter
+
+![Dashboard Dokter](screenshots/dashboard-dokter.png)
+
+### Booking Konsultasi Dokter
+
+![Booking Dokter](screenshots/booking-dokter.png)
+
+### Reminder Aktivitas
+
+![Reminder](screenshots/reminder.png)
+
+### Monitoring Kehamilan
+
+![Checklist Suami](screenshots/monitoring-ibu.png)
+
+### Artikel Edukasi Kehamilan
+
+![Artikel](screenshots/artikel.png)
+
+### Kelola Profil
+
+![Profil](screenshots/profil.png)
 
 
 

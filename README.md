@@ -63,8 +63,6 @@ src/
 
 ## Tampilan Aplikasi
 
-S## Tampilan Aplikasi
-
 ### Halaman Login
 
 ![Login](screenshots/login.png)

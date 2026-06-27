@@ -61,42 +61,27 @@ src/
 └── theme/
 ```
 
-### Halaman Login
+## Tampilan Aplikasi
 
-![Login](screenshoots/login.png)
+| Login | Dashboard Ibu Hamil |
+|-------|----------------------|
+| ![](screenshoots/login.png) | ![](screenshoots/dashboard-ibu.png) |
 
-### Dashboard Ibu Hamil
+| Dashboard Suami | Dashboard Dokter |
+|-----------------|------------------|
+| ![](screenshoots/dashboard-suami.png) | ![](screenshoots/dashboard-dokter.png) |
 
-![Dashboard Ibu](screenshoots/dashboard-ibu.png)
+| Booking Konsultasi Dokter | Reminder Aktivitas |
+|---------------------------|--------------------|
+| ![](screenshoots/booking-dokter.png) | ![](screenshoots/reminder.png) |
 
-### Dashboard Suami
+| Monitoring Kehamilan | Artikel Edukasi |
+|----------------------|-----------------|
+| ![](screenshoots/monitoring-ibu.png) | ![](screenshoots/artikel.png) |
 
-![Dashboard Suami](screenshoots/dashboard-suami.png)
-
-### Dashboard Dokter
-
-![Dashboard Dokter](screenshoots/dashboard-dokter.png)
-
-### Booking Konsultasi Dokter
-
-![Booking Dokter](screenshoots/booking-dokter.png)
-
-### Reminder Aktivitas
-
-![Reminder](screenshoots/reminder.png)
-
-### Monitoring Kehamilan
-
-![Monitoring](screenshoots/monitoring-ibu.png)
-
-### Artikel Edukasi Kehamilan
-
-![Artikel](screenshoots/artikel.png)
-
-### Kelola Profil
-
-![Profil](screenshoots/profil.png)
-
+| Kelola Profil |
+|---------------|
+| ![](screenshoots/profil.png) |
 
 
 

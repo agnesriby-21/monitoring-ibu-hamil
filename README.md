@@ -1,19 +1,19 @@
-# Pregnancy Monitoring System
+# Sistem Monitoring Ibu Hamil
 
-A hybrid mobile application developed using Ionic Angular for monitoring pregnancy. The application provides different interfaces for pregnant mothers, husbands, and doctors to support pregnancy monitoring and information management.
+Sistem Monitoring Ibu Hamil merupakan aplikasi mobile hybrid yang dikembangkan menggunakan **Ionic Framework** dan **Angular**. Aplikasi ini dirancang untuk membantu proses pemantauan kehamilan dengan menyediakan akses bagi ibu hamil, suami, dan dokter melalui sistem berbasis peran (*role-based access*).
 
-## Features
+## Fitur
 
-- User authentication (Login & Registration)
-- Mother Dashboard
-- Husband Dashboard
-- Doctor Dashboard
-- Mother Profile Management
-- Pregnancy Monitoring
-- Pregnancy Articles
-- Role-based Access Control
+- Login dan Registrasi Pengguna
+- Dashboard Ibu Hamil
+- Dashboard Suami
+- Dashboard Dokter
+- Pengelolaan Profil Ibu Hamil
+- Monitoring Kehamilan
+- Artikel Edukasi Kehamilan
+- Hak Akses Berdasarkan Peran Pengguna
 
-## Technologies
+## Teknologi yang Digunakan
 
 - Ionic Framework
 - Angular
@@ -22,27 +22,33 @@ A hybrid mobile application developed using Ionic Angular for monitoring pregnan
 - PHP
 - MySQL
 
-## Installation
+## Cara Menjalankan Aplikasi
 
-Clone the repository:
+1. Clone repository
 
 ```bash
 git clone https://github.com/agnesriby-21/monitoring-ibu-hamil.git
 ```
 
-Install dependencies:
+2. Masuk ke folder project
+
+```bash
+cd monitoring-ibu-hamil
+```
+
+3. Install seluruh dependency
 
 ```bash
 npm install
 ```
 
-Run the application:
+4. Jalankan aplikasi
 
 ```bash
 ionic serve
 ```
 
-## Project Structure
+## Struktur Project
 
 ```
 src/
@@ -52,14 +58,14 @@ src/
 └── theme/
 ```
 
-## Screenshots
+## Tampilan Aplikasi
 
-Screenshots will be added soon.
+Screenshot aplikasi akan ditambahkan pada pembaruan berikutnya.
 
-## Developer
+## Pengembang
 
 Agnesha Riby
 
-## License
+## Lisensi
 
-This project was developed for educational purposes.
+Project ini dikembangkan untuk keperluan pembelajaran dan portfolio.

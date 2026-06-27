@@ -65,10 +65,6 @@ src/
 
 Screenshot aplikasi akan ditambahkan pada pembaruan berikutnya.
 
-## Pengembang
 
-Agnesha Riby
 
-## Lisensi
 
-Project ini dikembangkan untuk keperluan pembelajaran dan portfolio.

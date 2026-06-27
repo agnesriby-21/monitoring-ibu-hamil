@@ -61,43 +61,41 @@ src/
 └── theme/
 ```
 
-## Tampilan Aplikasi
-
 ### Halaman Login
 
-![Login](screenshots/login.png)
+![Login](screenshoots/login.png)
 
 ### Dashboard Ibu Hamil
 
-![Dashboard Ibu](screenshots/dashboard-ibu.png)
+![Dashboard Ibu](screenshoots/dashboard-ibu.png)
 
 ### Dashboard Suami
 
-![Dashboard Suami](screenshots/dashboard-suami.png)
+![Dashboard Suami](screenshoots/dashboard-suami.png)
 
 ### Dashboard Dokter
 
-![Dashboard Dokter](screenshots/dashboard-dokter.png)
+![Dashboard Dokter](screenshoots/dashboard-dokter.png)
 
 ### Booking Konsultasi Dokter
 
-![Booking Dokter](screenshots/booking-dokter.png)
+![Booking Dokter](screenshoots/booking-dokter.png)
 
 ### Reminder Aktivitas
 
-![Reminder](screenshots/reminder.png)
+![Reminder](screenshoots/reminder.png)
 
 ### Monitoring Kehamilan
 
-![Checklist Suami](screenshots/monitoring-ibu.png)
+![Monitoring](screenshoots/monitoring-ibu.png)
 
 ### Artikel Edukasi Kehamilan
 
-![Artikel](screenshots/artikel.png)
+![Artikel](screenshoots/artikel.png)
 
 ### Kelola Profil
 
-![Profil](screenshots/profil.png)
+![Profil](screenshoots/profil.png)
 
 
 

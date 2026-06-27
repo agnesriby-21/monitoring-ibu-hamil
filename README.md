@@ -8,10 +8,13 @@ Sistem Monitoring Ibu Hamil merupakan aplikasi mobile hybrid yang dikembangkan m
 - Dashboard Ibu Hamil
 - Dashboard Suami
 - Dashboard Dokter
-- Pengelolaan Profil Ibu Hamil
 - Monitoring Kehamilan
 - Artikel Edukasi Kehamilan
 - Hak Akses Berdasarkan Peran Pengguna
+- Kelola Profil Pengguna
+- Booking Konsultasi Dokter
+- Pengingat (Reminder) Aktivitas
+- Checklist Pendampingan Suami
 
 ## Teknologi yang Digunakan
 

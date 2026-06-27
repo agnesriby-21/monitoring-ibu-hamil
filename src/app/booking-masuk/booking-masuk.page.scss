@@ -1,0 +1,333 @@
+ion-content {
+
+  --background: #F5F1E8;
+
+}
+
+
+.container {
+
+  padding: 20px;
+
+  padding-bottom: 100px;
+
+}
+
+
+
+/* TITLE */
+
+.title {
+
+  text-align: center;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  color: #FF5C8A;
+
+  margin-top: 20px;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+/* EMPTY */
+
+.empty-box {
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.empty-box ion-icon {
+
+  font-size: 60px;
+
+  color: #FF5C8A;
+
+}
+
+
+.empty-box p {
+
+  margin-top: 15px;
+
+  color: #666;
+
+  font-size: 16px;
+
+}
+
+
+
+/* CARD */
+
+.booking-card {
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.06);
+
+}
+
+
+
+/* TOP */
+
+.top-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+}
+
+
+.top-row h2 {
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #222;
+
+}
+
+
+.tanggal {
+
+  margin-top: 5px;
+
+  color: #888;
+
+  font-size: 14px;
+
+}
+
+
+
+/* STATUS */
+
+.status-badge {
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+
+}
+
+
+.pending {
+
+  background: #FFF1CC;
+
+  color: #D69E00;
+
+}
+
+
+.approve {
+
+  background: #D4F8D4;
+
+  color: #1F9D55;
+
+}
+
+
+.reject {
+
+  background: #FFD6D6;
+
+  color: #D64545;
+
+}
+
+
+.done {
+
+  background: #D8E7FF;
+
+  color: #2E6BDE;
+
+}
+
+
+
+/* KELUHAN */
+
+.keluhan-box {
+
+  background: #F8F8F8;
+
+  border-radius: 18px;
+
+  padding: 15px;
+
+  margin-top: 18px;
+
+}
+
+
+.keluhan-box h3 {
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #333;
+
+}
+
+
+.keluhan-box p {
+
+  margin-top: 8px;
+
+  color: #666;
+
+  line-height: 1.5;
+
+}
+
+
+
+/* BUTTON */
+
+.action-row {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+}
+
+
+ion-button {
+
+  flex: 1;
+
+  --border-radius: 16px;
+
+  font-weight: 700;
+
+  text-transform: none;
+
+}
+
+.filter-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.filter-row::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 2px solid #FF5C8A;
+  background: white;
+  color: #FF5C8A;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-btn.active {
+  background: #FF5C8A;
+  color: white;
+}
+
+.detail-box {
+  background: #FFF0F5;
+  border-radius: 15px;
+  padding: 12px 15px;
+  margin-top: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #FFE0EB;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #999;
+  font-size: 13px;
+}
+
+.detail-value {
+  color: #3B2B2B;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.booking-card {
+  cursor: pointer;
+}
+
+.pemeriksaan-title {
+  font-weight: 700;
+  color: #FF5C8A;
+  font-size: 14px;
+  margin: 12px 0 8px;
+  padding-top: 10px;
+  border-top: 1px solid #FFE0EB;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.back-icon {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}

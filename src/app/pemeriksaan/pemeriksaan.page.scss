@@ -1,0 +1,160 @@
+ion-content {
+
+  --background: #F5F1E8;
+
+}
+
+
+.container {
+
+  padding: 20px;
+
+  padding-bottom: 100px;
+
+}
+
+
+.title {
+
+  text-align: center;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  color: #FF5C8A;
+
+  margin-top: 20px;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+/* FORM CARD */
+
+.form-card {
+
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+
+
+/* ITEM */
+
+ion-item {
+
+  --background: #F8F8F8;
+
+  --border-radius: 18px;
+
+  margin-bottom: 18px;
+
+  --padding-start: 15px;
+
+  --inner-padding-end: 15px;
+
+}
+
+
+ion-label {
+
+  color: #666 !important;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+
+}
+
+
+ion-input,
+ion-textarea {
+
+  color: #333 !important;
+
+  font-size: 16px;
+
+}
+
+
+
+/* BUTTON */
+
+ion-button {
+
+  margin-top: 20px;
+
+  --background: #FF5C8A;
+
+  --border-radius: 18px;
+
+  height: 52px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  text-transform: none;
+
+  box-shadow:
+    0 4px 10px rgba(255, 92, 138, 0.35);
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.back-icon {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+
+.title {
+  text-align: left;
+  margin: 0;
+  font-size: 26px;
+}
+
+.pasien-card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.pasien-card ion-icon {
+  font-size: 40px;
+  color: #FF5C8A;
+}
+
+.pasien-nama {
+  font-weight: 700;
+  color: #3B2B2B;
+  font-size: 16px;
+  margin: 0;
+}
+
+.pasien-info {
+  color: #999;
+  font-size: 13px;
+  margin: 3px 0 0;
+}

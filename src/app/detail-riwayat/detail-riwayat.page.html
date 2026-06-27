@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="container">
+
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Hasil Pemeriksaan</h1>
+    </div>
+
+    <div class="detail-card" *ngIf="data">
+      <h2>Dr. {{ data.nama }}</h2>
+      <p class="tanggal">{{ formatTanggal(data.tanggal_periksa) }}</p>
+
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">Usia Kehamilan</span>
+          <span class="info-value">{{ data.usia_kehamilan }} minggu</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Berat Badan</span>
+          <span class="info-value">{{ data.berat_badan }} Kg</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Tekanan Darah</span>
+          <span class="info-value">{{ data.tekanan_darah }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Denyut Jantung Janin</span>
+          <span class="info-value">{{ data.denyut_jantung_janin }} bpm</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Keluhan</span>
+          <span class="info-value">{{ data.keluhan }}</span>
+        </div>
+      </div>
+
+      <div class="catatan-box">
+        <h3>Catatan Dokter</h3>
+        <p>{{ data.catatan_dokter || '-' }}</p>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

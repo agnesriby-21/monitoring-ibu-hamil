@@ -1,0 +1,86 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Monitoring Kehamilan</h1>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <ion-item lines="none">
+        <ion-label position="stacked">Berat Badan (kg)</ion-label>
+        <ion-input type="number" [(ngModel)]="berat_badan" placeholder="Contoh: 65"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Tekanan Darah</ion-label>
+        <ion-input [(ngModel)]="tekanan_darah" placeholder="Contoh: 120/80"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Denyut Jantung Janin (bpm)</ion-label>
+        <ion-input type="number" [(ngModel)]="denyut_jantung_janin" placeholder="Contoh: 140"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Gerakan Janin (per hari)</ion-label>
+        <ion-input type="number" [(ngModel)]="gerakan_janin" placeholder="Contoh: 10"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Keluhan</ion-label>
+        <ion-textarea [(ngModel)]="keluhan" placeholder="Tuliskan keluhan yang dirasakan..." rows="3"></ion-textarea>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Catatan</ion-label>
+        <ion-textarea [(ngModel)]="catatan" placeholder="Catatan tambahan..." rows="3"></ion-textarea>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Tanggal Monitoring</ion-label>
+        <ion-input type="date" [(ngModel)]="tanggal_monitoring"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="simpan()">Simpan Monitoring</ion-button>
+    </div>
+
+    <!-- HISTORY -->
+    <h2 class="history-title">Riwayat Monitoring</h2>
+
+    <div class="empty-card" *ngIf="monitoring_list.length == 0">
+      <ion-icon name="heart-outline"></ion-icon>
+      <p>Belum ada data monitoring</p>
+    </div>
+
+    <div class="history-card" *ngFor="let item of monitoring_list">
+      <div class="history-date">{{ formatTanggal(item.tanggal_monitoring) }}</div>
+
+      <div class="history-item">
+        <div class="history-label">Berat Badan</div>
+        <div class="history-value">{{ item.berat_badan }} Kg</div>
+      </div>
+      <div class="history-item">
+        <div class="history-label">Tekanan Darah</div>
+        <div class="history-value">{{ item.tekanan_darah }}</div>
+      </div>
+      <div class="history-item">
+        <div class="history-label">DJJ</div>
+        <div class="history-value">{{ item.denyut_jantung_janin }} bpm</div>
+      </div>
+      <div class="history-item">
+        <div class="history-label">Gerakan Janin</div>
+        <div class="history-value">{{ item.gerakan_janin || '-' }} kali/hari</div>
+      </div>
+      <div class="history-item">
+        <div class="history-label">Keluhan</div>
+        <div class="history-value">{{ item.keluhan || '-' }}</div>
+      </div>
+      <div class="history-item">
+        <div class="history-label">Catatan</div>
+        <div class="history-value">{{ item.catatan || '-' }}</div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

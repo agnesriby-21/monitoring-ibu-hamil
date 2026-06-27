@@ -1,0 +1,254 @@
+ion-content {
+
+  --background: #F5F1E8;
+
+}
+
+
+.container {
+
+  padding: 25px;
+
+}
+
+
+.title {
+
+  text-align: center;
+
+  color: #FF5C8A;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  margin-top: 20px;
+
+  margin-bottom: 30px;
+
+}
+
+
+.booking-card {
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.top-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+}
+
+
+h2 {
+
+  color: #3B2B2B;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  margin: 0;
+
+}
+
+
+p {
+
+  color: #666;
+
+  margin: 5px 0;
+
+}
+
+
+.status {
+
+  padding: 8px 14px;
+
+  border-radius: 15px;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+}
+
+
+.pending {
+
+  background: orange;
+
+}
+
+
+.disetujui {
+
+  background: #4CAF50;
+
+}
+
+
+.selesai {
+
+  background: #2196F3;
+
+}
+
+
+.ditolak {
+
+  background: #F44336;
+
+}
+
+
+.info {
+
+  margin-top: 15px;
+
+}
+
+
+.keluhan {
+
+  margin-top: 15px;
+
+  color: #3B2B2B;
+
+}
+
+
+.tanggal {
+
+  margin-top: 15px;
+
+  color: #999;
+
+  font-size: 13px;
+
+}
+
+.filter-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.filter-row::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 2px solid #FF5C8A;
+  background: white;
+  color: #FF5C8A;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-btn.active {
+  background: #FF5C8A;
+  color: white;
+}
+
+.schedule-box {
+  background: #F8F8F8;
+  border-radius: 15px;
+  padding: 12px 15px;
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  color: #999;
+  font-size: 12px;
+}
+
+.value {
+  color: #3B2B2B;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.keluhan-box {
+  margin-top: 15px;
+}
+
+.keluhan-box h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 5px;
+}
+
+.tanggal-box {
+  margin-top: 12px;
+  color: #999;
+  font-size: 13px;
+}
+
+.tanggal-box p {
+  font-weight: 600;
+  color: #555;
+  margin: 3px 0 0;
+}
+
+.button-row {
+  margin-top: 15px;
+}
+
+ion-button {
+  --background: #FF5C8A;
+  --border-radius: 15px;
+  font-weight: 700;
+}
+
+.empty-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.empty-card ion-icon {
+  font-size: 48px;
+  color: #FF6B9D;
+}
+
+.empty-card p {
+  color: #999;
+  margin-top: 10px;
+}

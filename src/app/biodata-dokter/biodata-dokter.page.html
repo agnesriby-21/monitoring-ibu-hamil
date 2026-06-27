@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="container">
+
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Biodata Dokter</h1>
+    </div>
+
+    <div class="nama-card">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <div>
+        <p class="nama">Dr. {{ nama }}</p>
+        <p class="sub">{{ spesialisasi || 'Belum diisi' }}</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <ion-item>
+        <ion-label position="stacked">Spesialisasi</ion-label>
+        <ion-select [(ngModel)]="spesialisasi" placeholder="Pilih spesialisasi">
+          <ion-select-option value="Sp.OG">Sp.OG — Obstetri & Ginekologi</ion-select-option>
+          <ion-select-option value="Sp.A">Sp.A — Spesialis Anak</ion-select-option>
+          <ion-select-option value="Sp.PD">Sp.PD — Penyakit Dalam</ion-select-option>
+          <ion-select-option value="Sp.GK">Sp.GK — Gizi Klinik</ion-select-option>
+          <ion-select-option value="Bidan">Bidan</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nomor HP</ion-label>
+        <ion-input [(ngModel)]="no_hp" type="tel" placeholder="Contoh: 08111234567"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nomor STR</ion-label>
+        <ion-input [(ngModel)]="no_str" placeholder="Nomor Surat Tanda Registrasi"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="simpan()">Simpan Biodata</ion-button>
+    </div>
+
+  </div>
+</ion-content>

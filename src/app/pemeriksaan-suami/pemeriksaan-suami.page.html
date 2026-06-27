@@ -1,0 +1,45 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Pemeriksaan Istri</h1>
+    </div>
+
+    <div *ngIf="pemeriksaan.length === 0" class="empty-card">
+      <ion-icon name="medical-outline"></ion-icon>
+      <p>Belum ada data pemeriksaan</p>
+    </div>
+
+    <div class="periksa-card" *ngFor="let item of pemeriksaan">
+      <div class="card-header">
+        <h3 class="tanggal">{{ formatTanggal(item.tanggal_periksa) }}</h3>
+        <span class="usia">{{ item.usia_kehamilan }} Minggu</span>
+      </div>
+      <div class="row">
+        <span class="label">Dokter</span>
+        <span class="value">dr. {{ item.nama }}</span>
+      </div>
+      <div class="row">
+        <span class="label">Berat Badan</span>
+        <span class="value">{{ item.berat_badan }} Kg</span>
+      </div>
+      <div class="row">
+        <span class="label">Tekanan Darah</span>
+        <span class="value">{{ item.tekanan_darah }}</span>
+      </div>
+      <div class="row">
+        <span class="label">Denyut Jantung Janin</span>
+        <span class="value">{{ item.denyut_jantung_janin }} bpm</span>
+      </div>
+      <div class="row">
+        <span class="label">Keluhan</span>
+        <span class="value">{{ item.keluhan || '-' }}</span>
+      </div>
+      <div class="row">
+        <span class="label">Catatan Dokter</span>
+        <span class="value">{{ item.catatan_dokter || '-' }}</span>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,158 @@
+ion-content {
+
+  --background: #F5F1E8;
+
+}
+
+
+.container {
+
+  padding: 20px;
+
+}
+
+
+.title {
+
+  text-align: center;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  color: #FF5C8A;
+
+  margin-top: 20px;
+
+  margin-bottom: 25px;
+
+}
+
+
+.detail-card {
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.detail-card h2 {
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #222;
+
+}
+
+
+.tanggal {
+
+  margin-top: 5px;
+
+  color: #888;
+
+}
+
+
+.info-box {
+
+  margin-top: 20px;
+
+  background: #F8F8F8;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+}
+
+
+.info-box p {
+
+  margin-bottom: 12px;
+
+  color: #444;
+
+}
+
+
+.catatan-box {
+
+  margin-top: 20px;
+
+}
+
+
+.catatan-box h3 {
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #333;
+
+}
+
+
+.catatan-box p {
+
+  margin-top: 10px;
+
+  color: #666;
+
+  line-height: 1.6;
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.back-icon {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+
+.title {
+  text-align: left;
+  margin: 0;
+  font-size: 26px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #999;
+  font-size: 14px;
+}
+
+.info-value {
+  color: #3B2B2B;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: right;
+  max-width: 60%;
+}

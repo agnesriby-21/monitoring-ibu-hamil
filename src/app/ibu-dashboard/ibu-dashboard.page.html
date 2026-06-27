@@ -1,13 +1,79 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>ibu-dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="container">
+    <!-- HEADER -->
+    <div class="header">
+      <div>
+        <h2>Hi, {{ nama }}</h2>
+        <p>Semangat hari ini ya, Bunda!</p>
+      </div>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ibu-dashboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <!-- CARD KEHAMILAN -->
+    <div class="pregnancy-card" routerLink="/monitoring-kehamilan">
+      <div class="left">
+        <h3>Usia Kehamilan</h3>
+        <h1>{{ kehamilan?.usia_kehamilan }} Minggu</h1>
+        <p>{{ trimester }}</p>
+        <div class="progress">
+          <div class="progress-fill" [style.width.%]="progress"></div>
+        </div>
+        <span class="progress-text">{{ progress | number:'1.0-0' }}% menuju persalinan</span>
+        <div class="date-row">
+          <span>HPHT: {{ formatTanggal(hpht) }}</span>
+        </div>
+      </div>
+      <div class="right">
+        <img src="assets/img/baby.png">
+      </div>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-grid">
+      <div class="menu-item" routerLink="/monitoring-kehamilan">
+        <div class="icon-box"><ion-icon name="heart-outline"></ion-icon></div>
+        <p>Monitoring</p>
+      </div>
+      <div class="menu-item" routerLink="/booking">
+        <div class="icon-box"><ion-icon name="medkit-outline"></ion-icon></div>
+        <p>Booking</p>
+      </div>
+      <div class="menu-item" routerLink="/edukasi">
+        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+        <p>Edukasi</p>
+      </div>
+      <div class="menu-item" routerLink="/tabs-ibu/riwayat">
+        <div class="icon-box"><ion-icon name="document-text-outline"></ion-icon></div>
+        <p>Riwayat</p>
+      </div>
+      <div class="menu-item" routerLink="/tabs-ibu/reminder">
+        <div class="icon-box"><ion-icon name="alarm-outline"></ion-icon></div>
+        <p>Reminder</p>
+      </div>
+      <div class="menu-item" routerLink="/tabs-ibu/profile">
+        <div class="icon-box"><ion-icon name="person-outline"></ion-icon></div>
+        <p>Profile</p>
+      </div>
+    </div>
+
+    <!-- JADWAL -->
+    <h2 class="section-title">Jadwal Terkait</h2>
+
+    <div class="schedule-card" *ngFor="let item of booking_terdekat">
+      <img src="assets/img/dokter.png">
+      <div class="schedule-info">
+        <h3>Dr. {{ item.nama }}</h3>
+        <p>{{ formatTanggal(item.tanggal_booking) }}</p>
+        <span>{{ item.hari }} | {{ formatJam(item.jam_mulai) }} - {{ formatJam(item.jam_selesai) }}</span>
+      </div>
+      <ion-badge [color]="getStatusColor(item.status_booking)">
+        {{ formatStatus(item.status_booking) }}
+      </ion-badge>
+    </div>
+
+    <div class="empty-card" *ngIf="booking_terdekat.length == 0">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <p>Belum ada booking aktif</p>
+    </div>
+
+  </div>
 </ion-content>

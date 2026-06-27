@@ -1,0 +1,14 @@
+<ion-content>
+  <div class="container">
+    <ion-button fill="clear" routerLink="/edukasi" class="back-btn">
+      <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+      Kembali
+    </ion-button>
+
+    <div class="badge">Minggu {{ data?.minggu_kehamilan }}</div>
+    <h1 class="title">{{ data?.judul }}</h1>
+    <div class="dokter">Oleh Dr. {{ data?.nama_dokter }}</div>
+
+    <div class="content">{{ data?.isi }}</div>
+  </div>
+</ion-content>

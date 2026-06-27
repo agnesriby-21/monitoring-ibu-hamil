@@ -1,0 +1,79 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon
+        name="arrow-back-outline"
+        class="back-icon"
+        (click)="goBack()"
+      ></ion-icon>
+
+      <h1 class="title">Biodata Ibu</h1>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <ion-item>
+        <ion-label position="stacked">
+          NIK
+        </ion-label>
+
+        <ion-input [(ngModel)]="nik"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Tanggal Lahir
+        </ion-label>
+
+        <ion-input
+          type="date"
+          [(ngModel)]="tanggal_lahir"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Alamat
+        </ion-label>
+
+        <ion-textarea [(ngModel)]="alamat"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Nomor HP
+        </ion-label>
+
+        <ion-input [(ngModel)]="no_hp"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Golongan Darah
+        </ion-label>
+
+        <ion-select [(ngModel)]="golongan_darah">
+          <ion-select-option value="A">A</ion-select-option>
+          <ion-select-option value="B">B</ion-select-option>
+          <ion-select-option value="AB">AB</ion-select-option>
+          <ion-select-option value="O">O</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Kontak Darurat
+        </ion-label>
+
+        <ion-input [(ngModel)]="kontak_darurat"></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        (click)="simpan()"
+      >
+        Simpan Biodata
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

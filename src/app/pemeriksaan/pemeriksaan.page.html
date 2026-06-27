@@ -1,0 +1,58 @@
+<ion-content>
+  <div class="container">
+
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Pemeriksaan Pasien</h1>
+    </div>
+
+    <!-- INFO PASIEN -->
+    <div class="pasien-card" *ngIf="nama_pasien">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <div>
+        <p class="pasien-nama">{{ nama_pasien }}</p>
+        <p class="pasien-info">Usia kehamilan: {{ usia_kehamilan }} minggu</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <ion-item>
+        <ion-label position="stacked">Tanggal Pemeriksaan</ion-label>
+        <ion-input type="date" [(ngModel)]="tanggal_periksa"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Usia Kehamilan (minggu)</ion-label>
+        <ion-input [(ngModel)]="usia_kehamilan" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Berat Badan (kg)</ion-label>
+        <ion-input type="number" [(ngModel)]="berat_badan" placeholder="Contoh: 65"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Tekanan Darah</ion-label>
+        <ion-input [(ngModel)]="tekanan_darah" placeholder="Contoh: 120/80"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Denyut Jantung Janin (bpm)</ion-label>
+        <ion-input type="number" [(ngModel)]="denyut_jantung_janin" placeholder="Contoh: 140"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Keluhan Pasien</ion-label>
+        <ion-textarea [(ngModel)]="keluhan" rows="3"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Catatan Dokter</ion-label>
+        <ion-textarea [(ngModel)]="catatan_dokter" placeholder="Tuliskan catatan dan saran..." rows="4"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" (click)="simpan()">Simpan Pemeriksaan</ion-button>
+    </div>
+
+  </div>
+</ion-content>

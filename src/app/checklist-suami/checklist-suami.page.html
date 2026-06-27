@@ -1,0 +1,21 @@
+<ion-content>
+  <div class="container">
+    <h1 class="title">Checklist Tugas Suami</h1>
+
+    <div class="input-card">
+      <ion-item>
+        <ion-input placeholder="Masukkan tugas..." [(ngModel)]="judul"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="tambahTugas()">Tambah Tugas</ion-button>
+    </div>
+
+    <div class="task-card" *ngFor="let item of checklist">
+      <div class="left">
+        <ion-checkbox [checked]="false" (ionChange)="toggleStatus(item)">
+        </ion-checkbox>
+        <h3>{{ item.judul }}</h3>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

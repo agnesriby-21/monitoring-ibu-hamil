@@ -35,3 +35,145 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+*{
+
+  font-family:
+  'Poppins',
+  sans-serif;
+
+}
+
+ion-button{
+
+  --border-radius:15px;
+
+  font-weight:bold;
+
+  text-transform:none;
+
+}
+
+ion-card{
+
+  border-radius:20px;
+
+  box-shadow:
+  0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ion-label,
+ion-input,
+ion-title{
+
+  color:#3B2B2B;
+
+}
+
+ion-input{
+
+  --color:#3B2B2B;
+
+}
+
+
+ion-textarea{
+
+  --color:#3B2B2B;
+
+}
+
+
+ion-select{
+
+  --color:#3B2B2B;
+
+}
+
+input,
+textarea,
+select{
+
+  color:#3B2B2B !important;
+
+}
+
+ion-alert{
+
+  --background:#ffffff;
+
+}
+
+
+.alert-wrapper{
+
+  background:#ffffff !important;
+
+}
+
+
+.alert-radio-label{
+
+  color:#3B2B2B !important;
+
+}
+
+
+.alert-button{
+
+  color:#FF5C8A !important;
+
+}
+
+
+.alert-title{
+
+  color:#3B2B2B !important;
+
+}
+
+
+.alert-message{
+
+  color:#666 !important;
+
+}
+
+ion-select{
+
+  --placeholder-color:#666;
+
+  --placeholder-opacity:1;
+
+  color:#3B2B2B !important;
+
+}
+
+ion-label{
+
+  color:#666 !important;
+
+  opacity:1 !important;
+
+}
+
+.label-stacked{
+
+  color:#666 !important;
+
+}
+
+input[type="date"]{
+
+  color:#3B2B2B !important;
+
+}

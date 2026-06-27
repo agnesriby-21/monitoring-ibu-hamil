@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Booking Dokter</h1>
+    </div>
+
+    <div class="form-card">
+      <ion-item>
+        <ion-label position="stacked">Pilih Dokter</ion-label>
+        <ion-select [(ngModel)]="dokter_id" (ionChange)="loadJadwal()" placeholder="Pilih dokter">
+          <ion-select-option *ngFor="let d of dokter_list" [value]="d.dokter_id">
+            Dr. {{ d.nama }} - {{ d.spesialisasi }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- INFO DOKTER -->
+      <div class="dokter-info" *ngIf="dokter_selected">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <div>
+          <p class="dokter-nama">Dr. {{ dokter_selected.nama }}</p>
+          <p class="dokter-spesialis">{{ dokter_selected.spesialisasi }}</p>
+        </div>
+      </div>
+
+      <ion-item>
+        <ion-label position="stacked">Jadwal Dokter</ion-label>
+        <ion-select [(ngModel)]="jadwal_id" placeholder="Pilih jadwal" [disabled]="jadwal_list.length == 0">
+          <ion-select-option *ngFor="let j of jadwal_list" [value]="j.jadwal_id">
+            {{ j.hari }} | {{ formatJam(j.jam_mulai) }} - {{ formatJam(j.jam_selesai) }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Tanggal Booking</ion-label>
+        <ion-input type="date" [(ngModel)]="tanggal_booking" [min]="today"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Keluhan</ion-label>
+        <ion-textarea [(ngModel)]="keluhan" placeholder="Tuliskan keluhan Anda..." rows="4"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" (click)="booking()">Booking Sekarang</ion-button>
+    </div>
+  </div>
+</ion-content>

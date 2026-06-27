@@ -1,0 +1,148 @@
+ion-content {
+
+    --background: #F5F1E8;
+
+}
+
+
+.container {
+
+    padding: 25px;
+
+}
+
+
+.title {
+
+    color: #3B2B2B;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    margin-top: 20px;
+
+}
+
+
+.input-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 25px;
+
+    margin-top: 25px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+ion-item {
+
+    --background: #FFF7F9;
+
+    --color: #3B2B2B;
+
+    border-radius: 15px;
+
+}
+
+
+ion-button {
+
+    margin-top: 15px;
+
+}
+
+
+.task-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+.left h3 {
+
+    margin: 0;
+
+    color: #3B2B2B;
+
+    font-size: 18px;
+
+}
+
+ion-item {
+
+    --background: white;
+
+    --color: #3B2B2B;
+
+    --border-color: transparent;
+
+    border-radius: 15px;
+
+}
+
+ion-input {
+
+    --color: #3B2B2B;
+
+    --placeholder-color: #999;
+
+}
+
+.done {
+    text-decoration: line-through;
+    color: var(--ion-color-medium);
+}
+
+.task-card .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ion-checkbox {
+    --checkbox-background-checked: #FF6B9D;
+    --border-color: #ccc;
+    --border-color-checked: #FF6B9D;
+    --border-radius: 6px;
+    --size: 24px;
+}
+
+ion-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+ion-badge[color="success"] {
+    --background: #e6f9f0;
+    --color: #2ecc71;
+}
+
+ion-badge[color="medium"] {
+    --background: #f0f0f0;
+    --color: #888;
+}

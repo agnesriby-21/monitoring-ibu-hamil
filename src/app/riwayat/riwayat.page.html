@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="container">
+    <h1 class="title">Riwayat Booking</h1>
+
+    <div class="filter-row">
+      <button class="filter-btn" [class.active]="filter_aktif === 'semua'"
+        (click)="filterRiwayat('semua')">Semua</button>
+      <button class="filter-btn" [class.active]="filter_aktif === 'pending'"
+        (click)="filterRiwayat('pending')">Menunggu</button>
+      <button class="filter-btn" [class.active]="filter_aktif === 'disetujui'"
+        (click)="filterRiwayat('disetujui')">Disetujui</button>
+      <button class="filter-btn" [class.active]="filter_aktif === 'ditolak'"
+        (click)="filterRiwayat('ditolak')">Ditolak</button>
+      <button class="filter-btn" [class.active]="filter_aktif === 'selesai'"
+        (click)="filterRiwayat('selesai')">Selesai</button>
+    </div>
+
+    <div class="empty-card" *ngIf="riwayat_filtered.length == 0">
+      <ion-icon name="document-text-outline"></ion-icon>
+      <p>Belum ada riwayat booking</p>
+    </div>
+
+    <div class="booking-card" *ngFor="let item of riwayat_filtered">
+      <div class="top-row">
+        <div class="doctor-section">
+          <h2>Dr. {{ item.nama }}</h2>
+          <p class="spesialis">{{ item.spesialisasi }}</p>
+        </div>
+        <div class="status" [ngClass]="item.status_booking">
+          {{ formatStatus(item.status_booking) }}
+        </div>
+      </div>
+
+      <div class="schedule-box">
+        <div class="schedule-item">
+          <span class="label">Hari</span>
+          <span class="value">{{ item.hari }}</span>
+        </div>
+        <div class="schedule-item">
+          <span class="label">Jam</span>
+          <span class="value">{{ formatJam(item.jam_mulai) }} - {{ formatJam(item.jam_selesai) }}</span>
+        </div>
+      </div>
+
+      <div class="keluhan-box">
+        <h3>Keluhan</h3>
+        <p>{{ item.keluhan }}</p>
+      </div>
+
+      <div class="tanggal-box">
+        <span>Tanggal Booking</span>
+        <p>{{ formatTanggal(item.tanggal_booking) }}</p>
+      </div>
+
+      <div class="button-row" *ngIf="item.status_booking == 'selesai'">
+        <ion-button expand="block" [routerLink]="['/detail-riwayat', item.booking_id]">
+          Lihat Hasil Pemeriksaan
+        </ion-button>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

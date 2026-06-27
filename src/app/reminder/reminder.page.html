@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="container">
+    <h1 class="title">Reminder</h1>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <ion-item lines="none">
+        <ion-label position="stacked">Judul Reminder</ion-label>
+        <ion-input [(ngModel)]="judul" placeholder="Contoh: Minum vitamin pagi"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked">Jenis Reminder</ion-label>
+        <ion-select [(ngModel)]="jenis_reminder" placeholder="Pilih jenis">
+          <ion-select-option value="obat">Obat</ion-select-option>
+          <ion-select-option value="vitamin">Vitamin</ion-select-option>
+          <ion-select-option value="kontrol">Kontrol Dokter</ion-select-option>
+          <ion-select-option value="olahraga">Olahraga</ion-select-option>
+          <ion-select-option value="nutrisi">Nutrisi & Makan</ion-select-option>
+          <ion-select-option value="istirahat">Istirahat</ion-select-option>
+          <ion-select-option value="lainnya">Lainnya</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked">Tanggal & Waktu</ion-label>
+        <ion-input type="datetime-local" [(ngModel)]="tanggal_reminder"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="simpan()">Simpan Reminder</ion-button>
+    </div>
+
+    <!-- LIST -->
+    <div class="reminder-card" *ngFor="let item of reminder_list" [class.done]="item.status_reminder == 'dibaca'">
+      <div class="top-row">
+        <div class="info">
+          <h2>{{ item.judul }}</h2>
+          <p class="tanggal">{{ formatTanggal(item.tanggal_reminder) }}</p>
+        </div>
+        <span class="jenis-badge" [ngClass]="item.jenis_reminder">
+          {{ formatJenis(item.jenis_reminder) }}
+        </span>
+      </div>
+      <div class="bottom-row">
+        <div class="status-row">
+          <ion-icon [name]="item.status_reminder == 'dibaca' ? 'checkmark-circle' : 'time-outline'"
+            [color]="item.status_reminder == 'dibaca' ? 'success' : 'warning'">
+          </ion-icon>
+          <span [class.done-text]="item.status_reminder == 'dibaca'">
+            {{ item.status_reminder == 'dibaca' ? 'Selesai' : 'Belum selesai' }}
+          </span>
+        </div>
+        <ion-button size="small" color="success" *ngIf="item.status_reminder == 'pending'"
+          (click)="selesai(item.reminder_id)">
+          Tandai Selesai
+        </ion-button>
+      </div>
+    </div>
+
+    <div class="empty-card" *ngIf="reminder_list.length == 0">
+      <ion-icon name="alarm-outline"></ion-icon>
+      <p>Belum ada reminder</p>
+    </div>
+
+  </div>
+</ion-content>

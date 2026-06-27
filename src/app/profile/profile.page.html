@@ -1,0 +1,105 @@
+<ion-content>
+  <div class="container">
+    <!-- PROFILE CARD -->
+    <div class="profile-card">
+      <div class="profile-icon">
+        <ion-icon name="person"></ion-icon>
+      </div>
+      <h1>{{ nama }}</h1>
+      <p>{{ email }}</p>
+      <div class="role-badge">{{ role }}</div>
+    </div>
+
+    <!-- MENU IBU -->
+    <div *ngIf="role == 'ibu'">
+      <div class="menu-item" (click)="goTo('/biodata-ibu')">
+        <div class="left">
+          <ion-icon name="person-outline"></ion-icon>
+          <span>Biodata Ibu</span>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+      <div class="menu-item" (click)="goTo('/data-kehamilan')">
+        <div class="left">
+          <ion-icon name="heart-outline"></ion-icon>
+          <span>Data Kehamilan</span>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+      <div class="menu-item" (click)="showKodePasangan()">
+        <div class="left">
+          <ion-icon name="key-outline"></ion-icon>
+          <span>Kode Pasangan</span>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+
+    <!-- MENU DOKTER -->
+    <div *ngIf="role == 'dokter'">
+      <div class="menu-item" (click)="goTo('/biodata-dokter')">
+        <div class="left">
+          <ion-icon name="medkit-outline"></ion-icon>
+          <span>Biodata Dokter</span>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+      <div class="menu-item" (click)="goTo('/tabs-dokter/jadwal')">
+        <div class="left">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <span>Jadwal Dokter</span>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+      <div class="menu-item" (click)="goTo('/booking-masuk')">
+        <div class="left">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <span>Booking Masuk</span>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+
+    <!-- MENU SUAMI -->
+    <div *ngIf="role == 'suami'">
+
+      <!-- BELUM TERHUBUNG -->
+      <div *ngIf="!sudah_terhubung" class="kode-card-suami">
+        <ion-icon name="link-outline" class="kode-icon"></ion-icon>
+        <h3>Hubungkan dengan Istri</h3>
+        <p>Masukkan kode pasangan dari istri untuk mulai memantau kesehatannya</p>
+
+        <!-- ganti ion-item dengan input biasa -->
+        <input class="kode-input" placeholder="Masukkan kode pasangan..." [(ngModel)]="input_kode" type="text">
+
+        <ion-button expand="block" (click)="hubungkanIstri()">
+          Hubungkan
+        </ion-button>
+      </div>
+
+      <!-- SUDAH TERHUBUNG -->
+      <div *ngIf="sudah_terhubung" class="connected-card">
+        <ion-icon name="checkmark-circle" color="success"></ion-icon>
+        <p>Sudah terhubung dengan istri</p>
+      </div>
+
+      <div class="menu-item" (click)="goTo('/biodata-suami')">
+        <div class="left">
+          <ion-icon name="person-outline"></ion-icon>
+          <span>Biodata Suami</span>
+        </div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+
+    </div>
+
+    <!-- LOGOUT -->
+    <div class="menu-item logout" (click)="logout()">
+      <div class="left">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <span>Logout</span>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

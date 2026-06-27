@@ -1,121 +1,51 @@
-<ion-header>
+<ion-content>
+  <div class="container">
+    <div class="top-section">
+      <h1>Buat Akun</h1>
+      <p>Daftar untuk mulai memantau kesehatan bunda</p>
+    </div>
 
-  <ion-toolbar>
+    <div class="form-section">
 
-    <ion-title>
-      Register
-    </ion-title>
+      <div class="error-box" *ngIf="message">
+        <ion-icon name="alert-circle-outline"></ion-icon>
+        {{ message }}
+      </div>
 
-  </ion-toolbar>
+      <ion-item>
+        <ion-input placeholder="Nama Lengkap" [(ngModel)]="nama"></ion-input>
+      </ion-item>
 
-</ion-header>
+      <ion-item>
+        <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-input type="password" placeholder="Password (min. 8 karakter)" [(ngModel)]="password"></ion-input>
+      </ion-item>
 
-<ion-content class="ion-padding">
+      <ion-item>
+        <ion-input type="password" placeholder="Konfirmasi Password" [(ngModel)]="confirm_password"></ion-input>
+      </ion-item>
 
-  <ion-item>
+      <ion-item>
+        <ion-select placeholder="Pilih Role" [(ngModel)]="role">
+          <ion-select-option value="ibu">Ibu Hamil</ion-select-option>
+          <ion-select-option value="dokter">Dokter</ion-select-option>
+          <ion-select-option value="suami">Suami</ion-select-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-label position="stacked">
-      Nama
-    </ion-label>
+      <ion-button expand="block" (click)="doRegister()" [disabled]="isLoading">
+        <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+        <span *ngIf="!isLoading">Register</span>
+      </ion-button>
 
-    <ion-input
-      [(ngModel)]="nama">
-    </ion-input>
+      <p class="bottom-text">
+        Sudah punya akun?
+        <span routerLink="/login">Login</span>
+      </p>
 
-  </ion-item>
-
-
-  <ion-item>
-
-    <ion-label position="stacked">
-      Email
-    </ion-label>
-
-    <ion-input
-      type="email"
-      [(ngModel)]="email">
-    </ion-input>
-
-  </ion-item>
-
-
-  <ion-item>
-
-    <ion-label position="stacked">
-      Password
-    </ion-label>
-
-    <ion-input
-      type="password"
-      [(ngModel)]="password">
-    </ion-input>
-
-  </ion-item>
-
-
-  <ion-item>
-
-    <ion-label position="stacked">
-      Confirm Password
-    </ion-label>
-
-    <ion-input
-      type="password"
-      [(ngModel)]="confirm_password">
-    </ion-input>
-
-  </ion-item>
-
-
-  <ion-item>
-
-    <ion-label>
-      Role
-    </ion-label>
-
-    <ion-select
-      [(ngModel)]="role">
-
-      <ion-select-option value="ibu">
-        Ibu
-      </ion-select-option>
-
-      <ion-select-option value="suami">
-        Suami
-      </ion-select-option>
-
-      <ion-select-option value="dokter">
-        Dokter
-      </ion-select-option>
-
-    </ion-select>
-
-  </ion-item>
-
-
-  <p style="color:red;">
-    {{ message }}
-  </p>
-
-
-  <ion-button
-    expand="block"
-    (click)="doRegister()"
-    [disabled]="isLoading">
-
-    {{ isLoading ? 'Loading...' : 'Register' }}
-
-  </ion-button>
-
-
-  <ion-button
-    expand="block"
-    fill="outline"
-    routerLink="/login">
-
-    Login
-
-  </ion-button>
-
+    </div>
+  </div>
 </ion-content>

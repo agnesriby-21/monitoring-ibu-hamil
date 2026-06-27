@@ -1,0 +1,58 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1>Jadwal Dokter</h1>
+    </div>
+
+    <div class="form-card">
+      <ion-item>
+        <ion-label position="stacked">Hari</ion-label>
+        <ion-select [(ngModel)]="hari" placeholder="Pilih hari">
+          <ion-select-option value="Senin">Senin</ion-select-option>
+          <ion-select-option value="Selasa">Selasa</ion-select-option>
+          <ion-select-option value="Rabu">Rabu</ion-select-option>
+          <ion-select-option value="Kamis">Kamis</ion-select-option>
+          <ion-select-option value="Jumat">Jumat</ion-select-option>
+          <ion-select-option value="Sabtu">Sabtu</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Jam Mulai</ion-label>
+        <input type="time" class="time-input" [(ngModel)]="jam_mulai">
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Jam Selesai</ion-label>
+        <input type="time" class="time-input" [(ngModel)]="jam_selesai">
+      </ion-item>
+
+      <ion-button expand="block" (click)="simpan()">Tambah Jadwal</ion-button>
+    </div>
+
+    <h2 class="section-title">Jadwal Saya</h2>
+
+    <div class="jadwal-card" *ngFor="let item of jadwal_list">
+      <div class="clock-box">
+        <ion-icon name="time-outline"></ion-icon>
+      </div>
+      <div class="jadwal-info">
+        <h2>{{ item.hari }}</h2>
+        <p>{{ formatJam(item.jam_mulai) }} - {{ formatJam(item.jam_selesai) }}</p>
+      </div>
+      <div class="card-actions">
+        <div class="status">Aktif</div>
+        <ion-button fill="clear" color="danger" size="small" (click)="hapusJadwal(item.jadwal_id)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+
+    <div class="empty-card" *ngIf="jadwal_list.length == 0">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <p>Belum ada jadwal dokter</p>
+    </div>
+
+  </div>
+</ion-content>

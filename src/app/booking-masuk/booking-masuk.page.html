@@ -1,0 +1,104 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Booking Masuk</h1>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter-btn" [class.active]="filter_aktif === 'semua'"
+        (click)="filterBooking('semua')">Semua</button>
+      <button class="filter-btn" [class.active]="filter_aktif === 'pending'"
+        (click)="filterBooking('pending')">Menunggu</button>
+      <button class="filter-btn" [class.active]="filter_aktif === 'disetujui'"
+        (click)="filterBooking('disetujui')">Disetujui</button>
+      <button class="filter-btn" [class.active]="filter_aktif === 'ditolak'"
+        (click)="filterBooking('ditolak')">Ditolak</button>
+      <button class="filter-btn" [class.active]="filter_aktif === 'selesai'"
+        (click)="filterBooking('selesai')">Selesai</button>
+    </div>
+
+    <div class="empty-box" *ngIf="booking_filtered.length == 0">
+      <ion-icon name="document-text-outline"></ion-icon>
+      <p>Belum ada booking</p>
+    </div>
+
+    <div class="booking-card" *ngFor="let item of booking_filtered" (click)="toggleDetail(item.booking_id)">
+
+      <div class="top-row">
+        <div>
+          <h2>{{ item.nama_lengkap }}</h2>
+          <p class="tanggal">{{ formatTanggal(item.tanggal_booking) }}</p>
+        </div>
+        <div class="status-badge" [ngClass]="{
+          'pending': item.status_booking == 'pending',
+          'approve': item.status_booking == 'disetujui',
+          'reject': item.status_booking == 'ditolak',
+          'done': item.status_booking == 'selesai'
+        }">
+          {{ formatStatus(item.status_booking) }}
+        </div>
+      </div>
+
+      <div class="keluhan-box">
+        <h3>Keluhan</h3>
+        <p>{{ item.keluhan || '-' }}</p>
+      </div>
+
+      <div class="detail-box" *ngIf="expanded_id === item.booking_id">
+        <div class="detail-row">
+          <span class="detail-label">Jadwal</span>
+          <span class="detail-value">
+            {{ item.hari }} | {{ formatJam(item.jam_mulai) }} - {{ formatJam(item.jam_selesai) }}
+          </span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Tanggal Booking</span>
+          <span class="detail-value">{{ formatTanggal(item.tanggal_booking) }}</span>
+        </div>
+
+        <div *ngIf="item.status_booking == 'selesai' && item.tanggal_periksa">
+          <div class="pemeriksaan-title">Hasil Pemeriksaan</div>
+          <div class="detail-row">
+            <span class="detail-label">Tanggal Periksa</span>
+            <span class="detail-value">{{ formatTanggal(item.tanggal_periksa) }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Berat Badan</span>
+            <span class="detail-value">{{ item.berat_badan }} Kg</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tekanan Darah</span>
+            <span class="detail-value">{{ item.tekanan_darah }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">DJJ</span>
+            <span class="detail-value">{{ item.denyut_jantung_janin }} bpm</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Catatan Dokter</span>
+            <span class="detail-value">{{ item.catatan_dokter || '-' }}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="action-row" (click)="$event.stopPropagation()">
+        <ion-button color="success" size="small" *ngIf="item.status_booking == 'pending'"
+          (click)="updateStatus(item.booking_id, 'disetujui')">
+          Setujui
+        </ion-button>
+        <ion-button color="danger" size="small" *ngIf="item.status_booking == 'pending'"
+          (click)="updateStatus(item.booking_id, 'ditolak')">
+          Tolak
+        </ion-button>
+        <ion-button color="primary" size="small" *ngIf="item.status_booking == 'disetujui'"
+          [routerLink]="['/pemeriksaan', item.booking_id]">
+          Periksa
+        </ion-button>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

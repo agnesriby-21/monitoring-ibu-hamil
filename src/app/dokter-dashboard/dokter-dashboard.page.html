@@ -1,13 +1,59 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>dokter-dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="container">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">dokter-dashboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="header">
+      <div>
+        <h1>Halo, Dr. {{ nama }}</h1>
+        <p>Semoga harimu menyenangkan</p>
+      </div>
+    </div>
+
+    <div class="doctor-card">
+      <div class="doctor-left">
+        <img src="assets/img/dokter.png">
+      </div>
+      <div class="doctor-right">
+        <h2>Dr. {{ nama }}</h2>
+        <p>{{ spesialisasi }}</p>
+        <div class="online-badge">Online</div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card active">
+        <h1>{{ booking_hari_ini }}</h1>
+        <p>Booking Hari Ini</p>
+      </div>
+      <div class="stat-card">
+        <h1>{{ total_pasien }}</h1>
+        <p>Pemeriksaan</p>
+      </div>
+      <div class="stat-card" [class.warning]="menunggu > 0">
+        <h1>{{ menunggu }}</h1>
+        <p>Menunggu</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Menu Utama</h2>
+
+    <div class="menu-grid">
+      <div class="menu-item" routerLink="/tabs-dokter/jadwal">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <p>Jadwal</p>
+      </div>
+      <div class="menu-item" routerLink="/booking-masuk">
+        <ion-icon name="document-text-outline"></ion-icon>
+        <p>Booking</p>
+      </div>
+      <div class="menu-item" routerLink="/edukasi-dokter">
+        <ion-icon name="newspaper-outline"></ion-icon>
+        <p>Edukasi</p>
+      </div>
+      <div class="menu-item" routerLink="/tabs-dokter/profile">
+        <ion-icon name="person-outline"></ion-icon>
+        <p>Profile</p>
+      </div>
+    </div>
+
+  </div>
 </ion-content>

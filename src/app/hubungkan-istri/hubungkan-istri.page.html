@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="container">
+    <div class="top-section">
+      <h1>Hubungkan Istri</h1>
+
+      <p>
+        Masukkan kode pasangan dari akun istri
+      </p>
+    </div>
+
+    <div class="form-section">
+      <ion-item>
+        <ion-input
+          placeholder="Kode Pasangan"
+          [(ngModel)]="kode_pasangan"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        (click)="hubungkan()"
+      >
+        Hubungkan
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

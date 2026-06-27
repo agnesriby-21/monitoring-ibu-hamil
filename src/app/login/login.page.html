@@ -1,67 +1,40 @@
-<ion-header>
+<ion-content>
+  <div class="container">
+    <div class="top-section">
+      <h1>Selamat Datang</h1>
+      <h2>Teman Bumil</h2>
+      <p>Pantau kesehatan kehamilan, jadwal pemeriksaan, dan perkembangan bunda bersama lebih mudah</p>
+    </div>
 
-  <ion-toolbar>
+    <div class="image-section">
+      <img src="assets/img/mom.png">
+    </div>
 
-    <ion-title>
-      Login
-    </ion-title>
+    <div class="form-section">
 
-  </ion-toolbar>
+      <div class="error-box" *ngIf="message">
+        <ion-icon name="alert-circle-outline"></ion-icon>
+        {{ message }}
+      </div>
 
-</ion-header>
+      <ion-item>
+        <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+      </ion-item>
 
-<ion-content class="ion-padding">
+      <ion-button expand="block" (click)="doLogin()" [disabled]="isLoading">
+        <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+        <span *ngIf="!isLoading">Login</span>
+      </ion-button>
 
-  <ion-item>
+      <p class="bottom-text">
+        Belum punya akun?
+        <span routerLink="/register">Register</span>
+      </p>
 
-    <ion-label position="stacked">
-      Email
-    </ion-label>
-
-    <ion-input
-      type="email"
-      [(ngModel)]="email">
-    </ion-input>
-
-  </ion-item>
-
-
-  <ion-item>
-
-    <ion-label position="stacked">
-      Password
-    </ion-label>
-
-    <ion-input
-      type="password"
-      [(ngModel)]="password">
-    </ion-input>
-
-  </ion-item>
-
-
-  <p style="color:red;">
-    {{ message }}
-  </p>
-
-
-  <ion-button
-    expand="block"
-    (click)="doLogin()"
-    [disabled]="isLoading">
-
-    {{ isLoading ? 'Loading...' : 'Login' }}
-
-  </ion-button>
-
-  <ion-button
-    expand="block"
-    fill="outline"
-    routerLink="/register">
-
-    Register
-
-  </ion-button>
-
+    </div>
+  </div>
 </ion-content>

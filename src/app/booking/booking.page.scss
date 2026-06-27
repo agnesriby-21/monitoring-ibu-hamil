@@ -1,0 +1,131 @@
+ion-content {
+
+  --background: #F5F1E8;
+
+}
+
+
+.container {
+
+  padding: 25px;
+
+  min-height: 100vh;
+
+}
+
+
+.title {
+
+  text-align: center;
+
+  color: #FF5C8A;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  margin-top: 20px;
+
+  margin-bottom: 30px;
+
+}
+
+
+.form-card {
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+
+ion-item {
+
+  --background: #fff;
+
+  --color: #3B2B2B;
+
+  border-radius: 15px;
+
+  margin-bottom: 18px;
+
+}
+
+
+ion-label {
+
+  color: #666 !important;
+
+}
+
+
+ion-select,
+ion-input,
+ion-textarea {
+
+  --color: #3B2B2B;
+
+  color: #3B2B2B;
+
+}
+
+
+ion-button {
+
+  margin-top: 20px;
+
+  height: 52px;
+
+  --background: #FF5C8A;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+}
+
+.dokter-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFF0F5;
+  border-radius: 15px;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+}
+
+.dokter-info ion-icon {
+  font-size: 36px;
+  color: #FF5C8A;
+}
+
+.dokter-nama {
+  font-weight: 700;
+  color: #3B2B2B;
+  margin: 0;
+}
+
+.dokter-spesialis {
+  color: #999;
+  font-size: 13px;
+  margin: 3px 0 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.back-icon {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}

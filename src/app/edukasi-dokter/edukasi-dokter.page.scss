@@ -1,0 +1,142 @@
+/* edukasi-dokter.page.scss */
+
+ion-content {
+
+  --background: #F5F1E8;
+
+}
+
+
+.container {
+
+  padding: 25px;
+
+}
+
+
+.header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+
+}
+
+
+.header h1 {
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  color: #FF5C8A;
+
+}
+
+
+.header ion-button {
+
+  --background: #FF5C8A;
+
+}
+
+
+.artikel-card {
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.badge {
+
+  background: #FFE0E8;
+
+  color: #FF5C8A;
+
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+
+}
+
+
+.artikel-card h2 {
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #333;
+
+  margin-bottom: 12px;
+
+}
+
+
+.artikel-card p {
+
+  color: #666;
+
+  line-height: 1.7;
+
+  margin-bottom: 15px;
+
+}
+
+
+.artikel-card small {
+
+  color: #999;
+
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.empty-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.empty-card ion-icon {
+  font-size: 48px;
+  color: #FF6B9D;
+}
+
+.empty-card p {
+  color: #999;
+  margin-top: 10px;
+}
+
+.back-icon {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}

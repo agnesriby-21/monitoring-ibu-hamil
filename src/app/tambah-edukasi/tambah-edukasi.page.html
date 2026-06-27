@@ -1,0 +1,33 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-button fill="clear" class="back-btn" routerLink="/edukasi-dokter">
+        <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <h1 class="title">Tambah Edukasi</h1>
+    </div>
+
+    <div class="input-card">
+      <label>Judul Artikel</label>
+      <ion-input [(ngModel)]="judul" placeholder="Masukkan judul artikel"></ion-input>
+    </div>
+
+    <div class="input-card">
+      <label>Minggu Kehamilan</label>
+      <ion-select [(ngModel)]="minggu_kehamilan" placeholder="Pilih minggu">
+        <ion-select-option *ngFor="let m of minggu_list" [value]="m">
+          Minggu {{ m }}
+        </ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="input-card">
+      <label>Isi Artikel</label>
+      <ion-textarea rows="10" [(ngModel)]="isi" placeholder="Tulis isi edukasi..."></ion-textarea>
+    </div>
+
+    <ion-button expand="block" class="save-btn" (click)="simpan()">
+      Simpan Artikel
+    </ion-button>
+  </div>
+</ion-content>

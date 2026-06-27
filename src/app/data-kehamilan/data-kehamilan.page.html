@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Data Kehamilan</h1>
+    </div>
+
+    <div class="form-card">
+      <ion-item>
+        <ion-label position="stacked">HPHT</ion-label>
+        <ion-input type="date" [(ngModel)]="hpht" (ionChange)="hitungUsiaKehamilan()">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Usia Kehamilan</ion-label>
+        <ion-input type="number" [value]="usia_kehamilan" readonly>
+        </ion-input>
+      </ion-item>
+
+      <p class="info-text" *ngIf="usia_kehamilan">
+        {{ usia_kehamilan }} minggu — dihitung otomatis dari HPHT
+      </p>
+
+      <ion-button expand="block" (click)="simpan()">
+        Simpan Data
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

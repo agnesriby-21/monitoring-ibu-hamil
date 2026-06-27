@@ -1,0 +1,37 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Monitoring Istri</h1>
+    </div>
+
+    <div *ngIf="monitoring.length === 0" class="empty-card">
+      <ion-icon name="analytics-outline"></ion-icon>
+      <p>Belum ada data monitoring</p>
+    </div>
+
+    <div class="monitor-card" *ngFor="let item of monitoring">
+      <h3 class="tanggal">{{ item.tanggal_monitoring }}</h3>
+      <div class="row">
+        <span class="label">Berat Badan</span>
+        <span class="value">{{ item.berat_badan }} Kg</span>
+      </div>
+      <div class="row">
+        <span class="label">Tekanan Darah</span>
+        <span class="value">{{ item.tekanan_darah }}</span>
+      </div>
+      <div class="row">
+        <span class="label">Denyut Jantung Janin</span>
+        <span class="value">{{ item.denyut_jantung_janin }}</span>
+      </div>
+      <div class="row">
+        <span class="label">Keluhan</span>
+        <span class="value">{{ item.keluhan }}</span>
+      </div>
+      <div class="row">
+        <span class="label">Catatan</span>
+        <span class="value">{{ item.catatan }}</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

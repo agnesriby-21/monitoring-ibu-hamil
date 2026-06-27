@@ -1,0 +1,41 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1 class="title">Edukasi Kehamilan</h1>
+    </div>
+
+    <!-- FILTER -->
+    <div class="filter-row">
+      <button class="filter-btn" [class.active]="filter_aktif === 'semua'" (click)="filterEdukasi('semua')">
+        Semua
+      </button>
+      <button class="filter-btn" [class.active]="filter_aktif === 't1'" (click)="filterEdukasi('t1')">
+        Trimester 1
+      </button>
+      <button class="filter-btn" [class.active]="filter_aktif === 't2'" (click)="filterEdukasi('t2')">
+        Trimester 2
+      </button>
+      <button class="filter-btn" [class.active]="filter_aktif === 't3'" (click)="filterEdukasi('t3')">
+        Trimester 3
+      </button>
+    </div>
+
+    <!-- LIST -->
+    <div class="artikel-card" *ngFor="let item of edukasi_filtered">
+      <div class="badge">Minggu {{ item.minggu_kehamilan }}</div>
+      <h2>{{ item.judul }}</h2>
+      <div class="dokter">Oleh Dr. {{ item.nama_dokter }}</div>
+      <p>{{ item.isi | slice:0:150 }}...</p>
+      <ion-button fill="outline" [routerLink]="['/detail-edukasi', item.edukasi_id]">
+        Baca Selengkapnya
+      </ion-button>
+    </div>
+
+    <div class="empty-card" *ngIf="edukasi_filtered.length == 0">
+      <ion-icon name="book-outline"></ion-icon>
+      <p>Belum ada artikel edukasi</p>
+    </div>
+
+  </div>
+</ion-content>

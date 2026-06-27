@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="back-icon" (click)="goBack()"></ion-icon>
+      <h1>Edukasi Kehamilan</h1>
+      <ion-button routerLink="/tambah-edukasi">Tambah</ion-button>
+    </div>
+
+    <div class="empty-card" *ngIf="edukasi_list.length == 0">
+      <ion-icon name="book-outline"></ion-icon>
+      <p>Belum ada artikel edukasi</p>
+    </div>
+
+    <div class="artikel-card" *ngFor="let item of edukasi_list">
+      <div class="card-top">
+        <div class="badge">Minggu {{ item.minggu_kehamilan }}</div>
+        <ion-button fill="clear" color="danger" size="small" (click)="hapusEdukasi(item.edukasi_id)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </div>
+      <h2>{{ item.judul }}</h2>
+      <p>{{ item.isi | slice:0:120 }}...</p>
+      <small>{{ formatTanggal(item.created_at) }}</small>
+    </div>
+
+  </div>
+</ion-content>

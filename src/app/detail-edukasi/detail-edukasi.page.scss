@@ -1,0 +1,77 @@
+ion-content {
+
+  --background: #F5F1E8;
+
+}
+
+
+.container {
+
+  padding: 25px;
+
+}
+
+
+.title {
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  color: #333;
+
+  margin-bottom: 18px;
+
+}
+
+
+.dokter {
+
+  color: #888;
+
+  margin-bottom: 15px;
+
+}
+
+
+.badge {
+
+  display: inline-block;
+
+  background: #FFE0E8;
+
+  color: #FF5C8A;
+
+  padding: 8px 16px;
+
+  border-radius: 20px;
+
+  font-weight: 700;
+
+  margin-bottom: 25px;
+
+}
+
+
+.content {
+
+  background: white;
+
+  padding: 22px;
+
+  border-radius: 25px;
+
+  line-height: 1.9;
+
+  color: #444;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+.back-btn {
+  --color: #FF5C8A;
+  margin-bottom: 15px;
+  margin-left: -10px;
+}

@@ -1,0 +1,66 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <ion-icon
+        name="arrow-back-outline"
+        class="back-icon"
+        (click)="goBack()"
+      ></ion-icon>
+
+      <h1 class="title">Biodata Suami</h1>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <ion-item>
+        <ion-label position="stacked">
+          NIK
+        </ion-label>
+
+        <ion-input [(ngModel)]="nik"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Tanggal Lahir
+        </ion-label>
+
+        <ion-input
+          type="date"
+          [(ngModel)]="tanggal_lahir"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Alamat
+        </ion-label>
+
+        <ion-textarea [(ngModel)]="alamat"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Nomor HP
+        </ion-label>
+
+        <ion-input [(ngModel)]="no_hp"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          Pekerjaan
+        </ion-label>
+
+        <ion-input [(ngModel)]="pekerjaan"></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        (click)="simpan()"
+      >
+        Simpan Biodata
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

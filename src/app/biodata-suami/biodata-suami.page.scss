@@ -1,0 +1,78 @@
+ion-content {
+
+    --background: #F5F1E8;
+
+}
+
+
+.container {
+
+    padding: 25px;
+
+}
+
+
+.title {
+
+    color: #3B2B2B;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    margin-top: 25px;
+
+}
+
+
+.form-card {
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 20px;
+
+    margin-top: 25px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+ion-item {
+
+    --background: #FFF7F9;
+
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+}
+
+
+ion-button {
+
+    margin-top: 25px;
+
+    --background: #FF5C8A;
+
+    height: 52px;
+
+    font-weight: 700;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.back-icon {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
